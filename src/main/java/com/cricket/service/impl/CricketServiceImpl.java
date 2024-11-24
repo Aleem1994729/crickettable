@@ -55,10 +55,10 @@ public class CricketServiceImpl implements CricketService {
         if(isPlayerAvailable(playerNumber)){
             Cricket deletePlayer = cricketRepository.findById(playerNumber).get();
             cricketRepository.delete(deletePlayer);
-            return "Player Deleted";
+            return "Player has been Deleted successfully";
         }
         else{
-            return "Player is not available in database to delete or it is deleted already";
+            return "Player is not available in database to delete ";
         }
     }
 }
