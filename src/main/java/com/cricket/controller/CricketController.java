@@ -23,7 +23,7 @@ public class CricketController {
        return cricketService.findAll();
    }
 
-    @PostMapping (value = "/SavePlayer", produces = "plain/text")
+    @PostMapping (value = "/SavePlayers", produces = "plain/text")
     public String savePlayer(@RequestBody Cricket player) {
         return String.valueOf(cricketService.savePlayer(player));
     }
@@ -33,7 +33,7 @@ public class CricketController {
         return String.valueOf(cricketService.isPlayerAvailable(playerNumber));
     }
 
-    @PostMapping (value="/updatePlayer" ,produces = "plain/text")
+    @PostMapping (value="/updatePlayers" ,produces = "plain/text")
     public String updatePlayer(@RequestParam(value = "number") int playerNumber, @RequestBody Cricket player) {
         return String.valueOf(cricketService.updatePlayer(playerNumber,player));
     }
